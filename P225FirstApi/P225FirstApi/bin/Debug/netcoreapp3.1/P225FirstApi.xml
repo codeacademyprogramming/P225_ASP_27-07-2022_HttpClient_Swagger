@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P225FirstApi</name>
+    </assembly>
+    <members>
+        <member name="T:P225FirstApi.Controllers.AccountsController">
+            <summary>
+            Account Controller
+            </summary>
+        </member>
+        <member name="M:P225FirstApi.Controllers.AccountsController.#ctor(AutoMapper.IMapper,Microsoft.AspNetCore.Identity.UserManager{P225FirstApi.Data.Entities.AppUser},P225FirstApi.Interfaces.IJWTManager)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mapper"></param>
+            <param name="userManager"></param>
+            <param name="jWTManager"></param>
+        </member>
+        <member name="M:P225FirstApi.Controllers.AccountsController.Register(P225FirstApi.DTOs.AccountsDTOs.RegisterDto)">
+            <summary>
+            Qeydiyyatdan Kecmek Ucun Service
+            </summary>
+            <param name="registerDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:P225FirstApi.Controllers.AccountsController.Login(P225FirstApi.DTOs.AccountsDTOs.LoginDto)">
+            <summary>
+            Sisteme Daxil Olmaq Service
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/accounts/login
+                {        
+                  "email": "hamidvm@code.edu.az",
+                  "password": "Admin@123"      
+                }
+            </remarks>
+            <param name="loginDto"></param>
+            <returns>response olaraq token qaytarir</returns>
+            <response code="200">Successfuly Login</response>
+            <response code="400">Email Or Password Is InCorred</response>          
+        </member>
+    </members>
+</doc>

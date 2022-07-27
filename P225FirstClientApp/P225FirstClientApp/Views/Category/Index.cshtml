@@ -1,0 +1,33 @@
+﻿@model List<CategoryIndexVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Categories</h1>
+
+<div class="container-fluid">
+    <div class="">
+        <div class="col">
+            <a asp-controller="Category" asp-action="Create">Create</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped table-active" >
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (CategoryIndexVM categoryIndexVM in Model)
+                {
+                    <tr>
+                        <td>@categoryIndexVM.Id</td>
+                        <td>@categoryIndexVM.Ad</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
